@@ -2,6 +2,7 @@
 var toppingE = ["Artichoke", "Feta" ]
 var toppingC = ["Pineapple", "Olives"]
 var pizzaSize = ["Small", "Medium", "Large", "XL"]
+
 function Pizza(pizzaSize, topping) {
   this.pizzaSize = pizzaSize;
   this.topping = topping;
@@ -30,17 +31,24 @@ function Pizza(pizzaSize, topping) {
   }
 //front-end
 $(document).ready(function() {
- //$("#size").submit(function(event) {
+ $("#pizza-builder").submit(function(event) {
    event.preventDefault();
-   var size = $("#pizza-size").val()
 
-    $("#topping").submit(function(event) {
-
-
+    var size = $("#pizza-size").val()
     var topping = $("input:radio[name=topping]:checked").val();
-alert(topping);
-    $("#size-result").text(size);
-    $("#topping-result").text(topping);
+    var userPizza = new Pizza(pizzaSize, topping);
+
+    Pizza.pizzaPrice();
+
+    //$(".results").show();
+    $("#size-result").text(userPizza.pizzaSize);
+    $("#topping-result").text(userPizza.topping);
+    $("#pizza-price").text(userPizza.price);
+      //console.log(userTicket);
+      //console.log("After processing: $" + userTicket.price);
+
+
+
 
   });
 });
