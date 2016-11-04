@@ -36,7 +36,7 @@ $(document).ready(function() {
    event.preventDefault();
 
     var inputSize = $("#pizza-size").val()
-    var inputTopping = $("#topping";).val();
+    var inputTopping = $("#topping").val();
 
     var userPizza = new Pizza(inputSize, inputTopping);
 
