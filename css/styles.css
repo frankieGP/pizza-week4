@@ -1,32 +1,21 @@
-/*body {
-  background: url(images/pizza.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
 
 
-/*
-.pizza-builder {width: 300px;
-    border: 25px solid rgba(0,255,0,0.77);
-    padding: 25px;
-    margin: 25px;
-}*/
-
-
-#biz-name{
+#biz-name {
 font-weight: bolder;
+font-size: 90pt;
 }
 
-body{
+body {
   font: italic normal bold 26px/normal "advent-pro", Helvetica, sans-serif;
   background-color: black;
   color: white;
   text-align: center;
-  margin-top: 100px;
-}
+  margin: 10px;
+  border: 2px solid white;
+  height: 100%;
 
+
+}
 #button {display: inline-block;
 -webkit-box-sizing: content-box;
 -moz-box-sizing: content-box;

@@ -28,11 +28,10 @@ function Pizza(pizzaSize, topping) {
     if(toppingE.includes(this.topping) === true){
       this.price +=2;
     }
-
   }
 //front-end
 $(document).ready(function() {
- $("#pizza-builder").submit(function(event) {
+  $("#pizza-builder").submit(function(event) {
    event.preventDefault();
 
     var inputSize = $("#pizza-size").val()
@@ -42,12 +41,9 @@ $(document).ready(function() {
 
     userPizza.pizzaPrice();
 
-    //$(".results").show();
+
     $("#size-result").text(userPizza.pizzaSize);
     $("#topping-result").text(userPizza.topping);
     $("#pizza-price").text(userPizza.price);
-      //console.log(userTicket);
-      //console.log("After processing: $" + userTicket.price);
-
   });
 });
