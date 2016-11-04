@@ -10,12 +10,6 @@ function Pizza(pizzaSize, topping) {
 }
 
   Pizza.prototype.pizzaPrice = function() {
-    if(toppingE.includes(this.topping) === true){
-      this.price +=2;
-    }
-    if(toppingC.includes(this.topping) === true){
-      this.price +=1;
-    }
     if(this.pizzaSize === "Small"){
       this.price +=1;
     }
@@ -28,6 +22,13 @@ function Pizza(pizzaSize, topping) {
     if(this.pizzaSize === "XL"){
       this.price +=4;
     }
+    if(toppingC.includes(this.topping) === true){
+      this.price +=1;
+    }
+    if(toppingE.includes(this.topping) === true){
+      this.price +=2;
+    }
+
   }
 //front-end
 $(document).ready(function() {
@@ -36,19 +37,16 @@ $(document).ready(function() {
 
     var inputSize = $("#pizza-size").val()
     var inputTopping = $("#topping").val();
-    var userPizza = new Pizza(pizzaSize, topping);
+    var userPizza = new Pizza(inputSize, inputTopping);
 
     userPizza.pizzaPrice();
 
     //$(".results").show();
-    $("#size-result").text(inputSize);
-    $("#topping-result").text(inputTopping);
+    $("#size-result").text(userPizza.pizzaSize);
+    $("#topping-result").text(userPizza.topping);
     $("#pizza-price").text(userPizza.price);
       //console.log(userTicket);
       //console.log("After processing: $" + userTicket.price);
-
-
-
 
   });
 });
