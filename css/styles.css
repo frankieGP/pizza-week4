@@ -13,13 +13,21 @@
     padding: 25px;
     margin: 25px;
 }*/
+
+
+#biz-name{
+font-weight: bolder;
+}
+
 body{
   font: italic normal bold 26px/normal "advent-pro", Helvetica, sans-serif;
   background-color: black;
   color: white;
+  text-align: center;
+  margin-top: 100px;
 }
 
-#button{display: inline-block;
+#button {display: inline-block;
 -webkit-box-sizing: content-box;
 -moz-box-sizing: content-box;
 box-sizing: content-box;
